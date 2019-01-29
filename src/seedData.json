@@ -1,0 +1,27 @@
+[
+    {
+        "id": 0,
+        "authors": ["Suzanne Collins"],
+        "description": "Set in a dark vision of the near future, a terrifying reality TV show is taking place.",
+        "image": "http://books.google.com/books/content?id=sazytgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+        "link": "http://books.google.com/books?id=sazytgAACAAJ&dq=title:The+Hunger+Games&hl=&source=gbs_api",
+        "title": "The Hunger Games"
+    },
+    {
+        "id": 1,
+        "authors": ["Arthur Miller"],
+        "description": "The play shows a series of chronological events which take place during one evening and the next day.",
+        "image": "https://books.google.com/books/content?id=VmJa4tLn0vMC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72tkv1yOM6lxT3SR-3yJMawvneDINBiBWJDx-2oPXf-Pb7M72r-Lvf18We2YB61_70v1UnaWSlPv7hCTRemPTTpHxyTTJTx9JV2CvT2W_3bEL6Rpc76icEPwy7zB_6v6gCPpEoT",
+        "link": "https://books.google.com/books?id=VmJa4tLn0vMC&dq=title%3AA%20Woman%20Lit%20Only%20By%20Fireflies&source=gbs_similarbooks",
+        "title": "Death of a Salesman"
+    },
+    {
+        "id": 2,
+        "authors": ["Holly Koelling"],
+        "description": "Best Books for Young Adults is back and better than ever!",
+        "image": "https://books.google.com/books/content?id=P842fHCIOq0C&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72CyTlOB24IHKkjcs2xESkzup6Si9WFPB_jA6WRuUsGrTD5ufSszx2AZtJpUn4IoXM34QiNMzHDXJJzlq_8MGrXjN634K9V4sZwsoAOG6sSwLxnlH7yJn8z8Q1P1GfRxlR_P7Ng",
+        "link": "https://books.google.com/books?id=P842fHCIOq0C&dq=title:A+Woman+Lit+Only+By+Firefles&source=gbs_book_similarbooks",
+        "title": "Best Books for Young Adults"
+    }
+
+]
