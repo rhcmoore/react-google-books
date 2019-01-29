@@ -13,6 +13,7 @@ function BookCard(props) {
     <div 
       className="col-lg-3"
       id={props.id}
+      key={props.id}
       onClick={() => props.handleClick(props.id)}
       >
       <div className="img-container">

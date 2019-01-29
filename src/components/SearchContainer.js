@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 import BookCard from "./BookCard";
 import Row from "./Row";
-import seedData from "../seedData.json"
 import SearchForm from "./SearchForm";
+import Jumbotron from "./Jumbotron";
 import API from "../utils/API";
 
-class Container extends Component {
+class SearchContainer extends Component {
 
     state = {
-        books: seedData,
         search: "",
         results: []
         };
@@ -47,8 +46,8 @@ class Container extends Component {
 
     render() {
         return (
-            <div className="container">
-                <h1 className="title">Google Books search</h1>
+            <div className="container-fluid">
+                <Jumbotron />
                 <Row>
                 <SearchForm 
                         search={this.state.search}
@@ -60,8 +59,9 @@ class Container extends Component {
                     {this.state.results.map(book => ( 
                         <BookCard
                             id={book.volumeInfo.id} 
+                            key={book.volumeInfo.id} 
                             title={book.volumeInfo.title} 
-                            description={book.searchInfo.textSnippet} 
+                            description={book.volumeInfo.description} 
                             image={book.volumeInfo.imageLinks.thumbnail} 
                             link={book.volumeInfo.infoLink} 
                             handleClick={this.handleBookClick}
@@ -73,4 +73,4 @@ class Container extends Component {
     }
 }
 
-export default Container;
+export default SearchContainer;
