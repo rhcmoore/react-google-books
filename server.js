@@ -2,6 +2,8 @@ const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
+const axios = require("axios");
+const router = require("express").Router();
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -12,6 +14,14 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Define API routes here
+
+// router.get("/api/books", (req, res) => {
+//   axios
+//     .get("http://www.recipepuppy.com/api/", { params: req.query })
+//     .then(({ data: { results } }) => res.json(results))
+//     .catch(err => res.status(422).json(err));
+// });
+
 
     // `/api/books` (get) - Should return all saved books as JSON.
 
