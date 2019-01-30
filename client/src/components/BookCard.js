@@ -14,7 +14,6 @@ function BookCard(props) {
       className="col-lg-3"
       id={props.id}
       key={props.id}
-      onClick={() => props.handleClick(props.id)}
       >
       <div className="img-container">
         <h5>{props.title}</h5>
@@ -26,6 +25,7 @@ function BookCard(props) {
         />
         <p><a href={props.link}>LINK</a></p>
         <p>{props.description}</p>
+        <p><a onClick={() => props.handleClick(props)} href="/search">SAVE</a></p>
       </div>
     </div>
   );

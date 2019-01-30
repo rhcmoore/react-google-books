@@ -50,10 +50,10 @@ class SearchContainer extends Component {
                 <Jumbotron />
                 <Row>
                 <SearchForm 
-                        search={this.state.search}
-                        handleFormSubmit={this.handleFormSubmit}
-                        handleInputChange={this.handleInputChange}
-                    />
+                    search={this.state.search}
+                    handleFormSubmit={this.handleFormSubmit}
+                    handleInputChange={this.handleInputChange}
+                />
                 </Row>
                 <Row >
                     {this.state.results.map(book => ( 

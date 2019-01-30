@@ -1,9 +1,8 @@
 const express = require("express");
-const path = require("path");
+const routes = require("./routes");
+const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3001;
 const app = express();
-const axios = require("axios");
-const router = require("express").Router();
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -13,29 +12,11 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// Define API routes here
+// Use apiRoutes
+app.use(routes);
 
-// router.get("/api/books", (req, res) => {
-//   axios
-//     .get("http://www.recipepuppy.com/api/", { params: req.query })
-//     .then(({ data: { results } }) => res.json(results))
-//     .catch(err => res.status(422).json(err));
-// });
-
-
-    // `/api/books` (get) - Should return all saved books as JSON.
-
-    // `/api/books` (post) - Will be used to save a new book to the database.
-
-    // `/api/books/:id` (delete) - Will be used to delete a book from the database by Mongo `_id`.
-
-    // `*` (get) - Will load your single HTML page in `client/build/index.html`. Make sure you have this _after_ all other routes are defined.
-
-// Send every other request to the React app
-// Define any API routes before this runs
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+// Connect to the Mongo DB
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactgooglebooks");
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
