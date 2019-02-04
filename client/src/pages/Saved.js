@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Jumbotron from "../Jumbotron";
+import Jumbotron from "../components/Jumbotron";
 
 class Saved extends Component {
 

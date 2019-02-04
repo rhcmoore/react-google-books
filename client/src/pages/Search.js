@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import BookCard from "../BookCard";
-import Row from "../Row";
-import SearchForm from "../SearchForm";
-import Jumbotron from "../Jumbotron";
-import API from "../../utils/API";
+import BookCard from "../components/BookCard";
+import Row from "../components/Row";
+import SearchForm from "../components/SearchForm";
+import Jumbotron from "../components/Jumbotron";
+import API from "../utils/API";
 
 class Search extends Component {
 
@@ -24,8 +24,8 @@ class Search extends Component {
             .catch(err => console.log(err));
     }
 
-    // on Book click,
-    handleBookClick = event => {
+    // on Save click,
+    handleSaveClick = event => {
     // Log book ID (which is the event)
         const bookInfo = event;
         console.log(bookInfo);
@@ -68,7 +68,7 @@ class Search extends Component {
                             description={book.volumeInfo.description} 
                             image={book.volumeInfo.imageLinks.thumbnail} 
                             link={book.volumeInfo.infoLink} 
-                            handleClick={this.handleBookClick}
+                            handleSaveClick={this.handleSaveClick}
                         />
                     ))}
                 </Row>

@@ -24,8 +24,8 @@ function BookCard(props) {
             style={styles.image}
         />
         <p><a href={props.link}>LINK</a></p>
+        <p onClick={() => props.handleSaveClick(props)}>SAVE</p>
         <p>{props.description}</p>
-        <p><a onClick={() => props.handleClick(props)} href="/search">SAVE</a></p>
       </div>
     </div>
   );

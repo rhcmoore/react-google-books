@@ -5,6 +5,6 @@ export default {
         return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + query);
     },
     saveBook: function(bookInfo) {
-        return axios.post(`/api/books/${bookInfo}`);
+        return axios.post(`/${bookInfo.id}`);
     }
 };
